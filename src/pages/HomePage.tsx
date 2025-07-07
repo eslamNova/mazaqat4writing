@@ -3,7 +3,6 @@ import { supabase } from '../lib/supabase';
 import PostCard from '../components/posts/PostCard';
 import LatestComments from '../components/comments/LatestComments';
 import LoadingSpinner from '../components/ui/LoadingSpinner';
-import AIWritingAssistant from '../components/ai/AIWritingAssistant';
 
 interface Post {
   id: string;
@@ -84,11 +83,6 @@ const HomePage: React.FC = () => {
           {error}
         </div>
       )}
-      
-      <div className="mb-8 text-center">
-        {/* AI Writing Assistant */}
-        <AIWritingAssistant />
-      </div>
       
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Latest Comments Section - First on mobile, right side on desktop */}
